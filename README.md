@@ -89,6 +89,15 @@
 - `Animations`: All of the animations that you can do in game with your character split into categories.
 - Credit to [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/) and [Gaz](https://gov.eclipse-rp.net/viewtopic.php?t=85313), the original creators of this modified menu
 
+### Troubleshooting Common Issues:
+
+| **Problem**                                                     | **Solution**                                                                                                                                  |
+|-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| The menu is not showing up in game                              | Ensure that you are running the AHK script as administrator.                                                                                  |
+| The menu minimizes my game every time I open it                 | Ensure that you are running your game in `Windowed Borderless` mode.                                                                          |
+| The Windows taskbar stays visible after I run `Issue Citation`  | I am not sure why this happens, as I can never get it to consistently replicate.  Try selecting `Issue Citation` again and selecting the game |
+| I drop panics when I turn on my sirens                          | Remove the portion that turns on the MDC from the script (`lines 14-28`).                                                                     |
+
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This work is licensed under a
