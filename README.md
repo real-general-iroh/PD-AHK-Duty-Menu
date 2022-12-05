@@ -57,7 +57,7 @@
 - `Animations`: All of the animations that you can do in game with your character split into categories.
   - Credit to [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/), the original creator of this modified menu
 
-Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
