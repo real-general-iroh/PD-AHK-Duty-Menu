@@ -78,7 +78,7 @@
 - `Pursuit Force`: Uses the megaphone (`/m`) to issue demands during a pursuit.
   - `/m LSPD, STOP THE VEHICLE NOW OR FORCE MAY BE USED`
 - `Animations`: All of the animations that you can do in game with your character split into categories.
-  - Credit to [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/), the original creator of this modified menu
+- Credit to [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/) and [Gaz](https://gov.eclipse-rp.net/viewtopic.php?t=85313), the original creators of this modified menu
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
