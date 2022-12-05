@@ -2,7 +2,7 @@
 
 ## How to use:
 
-- If you have any issues with this menu or any bugs that you find, please create an issue.  Additionally, if you want new features added or want to add a feature yourself, please create an issue or do a pull request.
+- If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a push/pull request.
 
 ### Buttons:
 - `F3` Opens the menu
@@ -46,6 +46,29 @@
       - Dropdown menu for the type of license(s) to suspend
         - **Please note that you only need to input the required information.**  For example, if you are issuing a parking citation, you do not need to input the `Player ID`, `Demerit Info`, or `License Type`.  You only need to select the type of citation if you are only issuing a citation.
     - `Hand Citation`: Does the RP of handing the citation to the driver
+  - `Felony Stop`: Step 1-5 of the demands to be given over the megaphone to the driver and passengers during a felony stop.
+  - `Arrest`:
+    - `Cuff`: Does the RP for attempting to cuff an arrestee
+    - `Uncuff`: Does the RP for attempting to uncuff an arrestee
+    - `Frisk`: Does the RP for attempting to frisk someone
+    - `Frisk for License`: Does the RP of attempting to locate an ID on someone
+    - `Frisk for Keys`: Does the RP of attempting to locate a set of keys
+    - `Unlock Cuffed Person's Car`: Does the RP of taking the keys out, unlocking the car, and putting them back
+    - `View Cuffed License`: Does the RP of viewing a cuffed person's license after they `/license [ID]` you
+  - `Scene Management`:
+    - `Grab Barriers`: Does the RP of grabbing barriers from the trunk of a cruiser
+    - `Gather All Barriers`: Does the RP of gathering all of the barriers and placing them under your arms, then does `/RemoveAllBlockades`
+    - `Store Barriers`: Does the RP of storing the barriers in the trunk of a cruiser
+    - `Grab BLS Kit`: Does the RP of grabbing a BLS kit from the trunk of a cruiser
+    - `Initial BLS`: Does the RP of setting down the BLS kit, then looking over a player's injuries
+    - `Grab Body Bag`: Does the RP of grabbing a body bag from the trunk of a cruiser
+    - `Load Into Body Bag`: Does the RP of loading a body into a body bag and zipping it up
+  - `Inmate Processing`:
+    - `Uncuff`: Does the RP for attempting to uncuff an arrestee
+    - `Release Form`: Does the RP of signing the release form at DOC
+    - `Mugshot`: (**Use in first person**) Toggles the UI with `F7`, then takes a screenshot with `F8`, then does the RP of taking a mugshot with your phone and uploading it to the PD database (`/record`)
+    - `Fingerprints`: Does `/collectprints`, then waits for the user to press `enter`, then does the RP of collecting the prints of an individual while the `/collectprints` script runs
+  - `Tow Vehicle`: Does the RP for loading a vehicle onto a flatbed
 - `Departmental Radio`:
   - `PD to DOC`: Does a radio call over the departmental radio to DOC
   - `PD to MD`: Does a radio call over the departmental radio to MD
