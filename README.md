@@ -1,8 +1,9 @@
-# PD/SD AHK-Duty-Menu
+# PD AHK-Duty-Menu
 
 ## How to use:
 
 - If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a push/pull request.
+- Additionally, I have ran this by admins and they have all said that this does not break any rules, as it is all stuff that we do all the time.
 
 ### Buttons:
 - `F3` Opens the menu
@@ -11,7 +12,7 @@
 - `Numpad Add` Opens the mini MDC (**Remove this part if you have issues with emergencies dropping when you press `E`**)
 - `Mouse 5` Rebinds your mouse button 5 (browser forward button) to `P` so it shows up as you using your phone in-game when you speak in TAC over TeamSpeak
 ### Global Variables:
-- **YOU MUST CHANGE THESE** | The global variables are located near the top of the file starting at `line 9`.
+> **YOU MUST CHANGE THESE** | The global variables are located near the top of the file starting at `line 9`.
 
 | Variable | Description |
 | ----------- | ----------- |
