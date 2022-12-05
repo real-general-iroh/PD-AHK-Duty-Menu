@@ -2,6 +2,13 @@
 
 ## How to use:
 
+> If you are having issues with it not working in game, you may have to run the script as administrator, as RAGE may be preventing AutoHotKey from capturing your keyboard input.
+
+1. Download and install [AutoHotKey](https://www.autohotkey.com/download/)
+2. Download the `PD Duty Menu.ahk` file
+3. Place the `PD Duty Menu.ahk` file in a folder
+4. Run the `PD Duty Menu.ahk`
+
 - If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a push/pull request.
 - Additionally, I have ran this by admins and they have all said that this does not break any rules, as it is all stuff that we do all the time.
 
