@@ -2,7 +2,7 @@
 
 ## How to use:
 
-- If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a push/pull request.
+- If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a pull request.
 
 ### Buttons:
 - `F3` Opens the menu
