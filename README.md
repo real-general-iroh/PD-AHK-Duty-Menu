@@ -9,6 +9,7 @@
 - `F3` Opens the menu
 - `F9` Resets your in-game VOIP
 - `F10` Clears your GPS of calls, backups, and emergencies (`/setcall -1`)
+- `F12` Kill switch to exit the application in the event of a misclick
 - `Numpad Add` Opens the mini MDC (**Remove this part if you have issues with emergencies dropping when you press `E`**)
 - `Mouse 5` Rebinds your mouse button 5 (browser forward button) to `P` so it shows up as you using your phone in-game when you speak in TAC over TeamSpeak
 ### Global Variables:
