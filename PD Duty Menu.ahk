@@ -107,6 +107,7 @@ Menu, ArrestMenu, Add, Uncuff, PDUncuff
 Menu, ArrestMenu, Add, Frisk, PDFrisk
 Menu, ArrestMenu, Add, Frisk for License, PDLicenseFrisk
 Menu, ArrestMenu, Add, Frisk for Keys, PDKeyFrisk
+Menu, ArrestMenu, Add, Unlock Cuffed Person's Car, PDUnlockCuffedCar
 Menu, ArrestMenu, Add, View Cuffed License, PDLicenseCuff
 Menu, FullMenuMe, Add, Arrest, :ArrestMenu
 
@@ -1458,6 +1459,10 @@ PDKeyFrisk:
 	send, t/me Attempts to locate a set of keys{enter}
 	Sleep 500
 	send, t/do Would I find any?{enter}
+return
+
+PDUnlockCuffedCar:
+	send, t/me Takes the keys out, clicks the unlock button and puts them back where they were{enter}
 return
 
 PDLicenseCuff:
