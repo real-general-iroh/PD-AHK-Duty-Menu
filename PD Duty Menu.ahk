@@ -1245,7 +1245,7 @@ PDIssueCitationHandler:
 	Gui, Add, DropdownList, w300 vLicenseType, Select...||Driver|Driver and Trucker
 	Gui, Add, Button, Default x80 gOk w80, Ok
 	Gui, Add, Button, Default x+0 gCancel w80, Cancel
-	Gui, Show,, Issue Citation TOM RPly
+	Gui, Show,, Issue Citation RPly
 	return
 
 	Ok:
