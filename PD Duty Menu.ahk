@@ -1173,13 +1173,13 @@ return
 LincolnUnit:
 	send, t/renameunit %LincolnCallsign% {enter}
 	Sleep 500
-	send, t/r %BadgeNumber% show me renaming unit to %LincolnCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me renaming unit to %LincolnCallsign% {enter}
 return
 
 AdamUnit:
 	send, t/renameunit %AdamCallsign% {enter}
 	Sleep 500
-	send, t/r %BadgeNumber% show me renaming unit to %AdamCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me renaming unit to %AdamCallsign% {enter}
 return
 
 ResumeLincolnUnit:
@@ -1187,7 +1187,7 @@ ResumeLincolnUnit:
 	Sleep 500
 	send, t/createunit %LincolnCallsign% {enter}
 	Sleep 500
-	send, t/r %BadgeNumber% show me leaving unit and continuing under %LincolnCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me leaving unit and continuing under %LincolnCallsign% {enter}
 return
 
 CustomUnit:
@@ -1205,14 +1205,14 @@ CustomUnit:
 		Sleep 350
 		send, t/joinunit %CallSign% {enter}
 		Sleep 350
-		send, t/r %BadgeNumber% show me joining %CallSign% {enter}
+		send, t/rlow %BadgeNumber% show me joining %CallSign% {enter}
 	}
 return
 
 RenameSpecialCallsign:
 	send, t/renameunit %SpecialCallsign% {enter}
 	Sleep 500
-	send, t/r %BadgeNumber% show me renaming unit to %SpecialCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me renaming unit to %SpecialCallsign% {enter}
 return
 
 JoinSpecialCallsign:
@@ -1220,12 +1220,12 @@ JoinSpecialCallsign:
 	Sleep 250
 	send, t/joinunit %SpecialCallsign% {enter}
 	Sleep 250
-	send, t/r %BadgeNumber% show me disbanding and joining %SpecialCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me disbanding and joining %SpecialCallsign% {enter}
 return
 
 ;Traffic stop handlers
 PDHandCitation:
-	send, t/me Hands the citation to the driver{enter}
+	send, t/melow Hands the citation to the driver{enter}
 return
 
 PDIssueCitationHandler:
@@ -1249,45 +1249,45 @@ PDIssueCitationHandler:
 		Gui,Submit
 		if ((DemeritSuspend="No" or DemeritSuspend="Select...") and CitationType!="Select...") {
 			sleep 150
-			send, t/me Logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
+			send, t/melow Logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
 			sleep 350
-			send, t/me Prints out the citation and grabs it from the printer{enter}
+			send, t/melow Prints out the citation and grabs it from the printer{enter}
 		} else if (DemeritSuspend="Yes" and CitationType!="Select...") {
 			if (PlayerID!=""){
 				sleep 150
-				send, t/me Logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
+				send, t/melow Logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
 				sleep 350
 				send, t/warndriver %PlayerID%{enter}
 				sleep 450
-				send, t/me Adds a demerit to the individual's driver's license{enter}
+				send, t/melow Adds a demerit to the individual's driver's license{enter}
 				sleep 350
-				send, t/me Prints out the citation and grabs it from the printer{enter}
+				send, t/melow Prints out the citation and grabs it from the printer{enter}
 			} else {
 				MsgBox,, ERROR, You must enter a player ID in order to issue a demerit!
 			}
 		} else if (DemeritSuspend="Demerit and Suspension" and CitationType!="Select...") {
 			if (LicenseType="Driver" or LicenseType="Driver and Trucker") and (PlayerID!=""){
 				sleep 150
-				send, t/me Logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
+				send, t/melow Logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
 				sleep 350
 				send, t/warndriver %PlayerID%{enter}
 				sleep 450
-				send, t/me Adds a demerit to the individual's driver's license{enter}
+				send, t/melow Adds a demerit to the individual's driver's license{enter}
 				sleep 450
 				if (LicenseType="Driver"){
 					send, t/suspend %PlayerID% driver 1{enter}
 					sleep 450
-					send, t/me Issues a 24 hour suspension on the individual's driver's license{enter}
+					send, t/melow Issues a 24 hour suspension on the individual's driver's license{enter}
 					sleep 350
-					send, t/me Prints out the citation and grabs it from the printer{enter}
+					send, t/melow Prints out the citation and grabs it from the printer{enter}
 				} else if (LicenseType="Driver and Trucker"){
 					send, t/suspend %PlayerID% driver 1{enter}
 					sleep 550
 					send, t/suspend %PlayerID% trucker 1{enter}
 					sleep 550
-					send, t/me Issues a 24 hour suspension on both the individual's driver's and trucker's license{enter}
+					send, t/melow Issues a 24 hour suspension on both the individual's driver's and trucker's license{enter}
 					sleep 350
-					send, t/me Prints out the citation and grabs it from the printer{enter}
+					send, t/melow Prints out the citation and grabs it from the printer{enter}
 				}
 			} else if (PlayerID="") {
 				MsgBox,, ERROR, You must enter a player ID in order to issue a suspension!
@@ -1296,9 +1296,9 @@ PDIssueCitationHandler:
 			}
 		} else if (GeneralCitationType!="Select...") {
 		    sleep 150
-		    send, t/me Logs into the MDC and adds a "%GeneralCitationType%" citation to the individual's record{enter}
+		    send, t/melow Logs into the MDC and adds a "%GeneralCitationType%" citation to the individual's record{enter}
 		    sleep 850
-		    send, t/me Prints out the citation and grabs it from the printer{enter}
+		    send, t/melow Prints out the citation and grabs it from the printer{enter}
 		} else {
 			MsgBox,, ERROR, You must select a citation type!
 		}
@@ -1306,17 +1306,17 @@ PDIssueCitationHandler:
 return
 
 PDLicense:
-	send, t/me Looks at the license and hands it back to you{enter}
+	send, t/melow Looks at the license and hands it back to you{enter}
 return
 
 TowVehicle:
-	Send, t/me Opens the control panel, pulls down a lever, and lowers the ramp{enter}
+	Send, t/melow Opens the control panel, pulls down a lever, and lowers the ramp{enter}
 	Sleep, 3000
-	Send, t/me Deploys the winch cables and securely attaches the cables to the front of the vehicle{enter}
+	Send, t/melow Deploys the winch cables and securely attaches the cables to the front of the vehicle{enter}
 	Sleep, 3000
-	Send, t/me Pulls another lever on the control panel and starts the winch{enter}
+	Send, t/melow Pulls another lever on the control panel and starts the winch{enter}
 	Sleep, 3000
-	Send, t/me Secures the vehicle by its tires to the flatbed and lifts the ramp{enter}
+	Send, t/melow Secures the vehicle by its tires to the flatbed and lifts the ramp{enter}
 Return
 
 ;Interdepartmental radio handlers
@@ -1331,7 +1331,7 @@ DRadio:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (MinInput!="") {
-			Send, t/dep PD to DOC, en route with %NumberInput% x 10-15. ETA %MinInput% minutes. Are you able to receive?{enter}
+			Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15. ETA %MinInput% minutes. Are you able to receive?{enter}
 		}
 		else {
 			MsgBox,, ERROR, You must input the ETA!
@@ -1353,7 +1353,7 @@ DRadioHVT:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (MinInput!=""){
-			Send, t/dep PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %MinInput% minutes. Are you able to receive?{enter}
+			Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %MinInput% minutes. Are you able to receive?{enter}
 		}
 		else {
 			MsgBox,, ERROR, You must input the ETA!
@@ -1377,7 +1377,7 @@ DRadioMDPris:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (BackupNumber!=""){
-			Send, t/dep PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %BackupNumber% minutes. Are you able to receive?{enter}
+			Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %BackupNumber% minutes. Are you able to receive?{enter}
 		}
 		else {
 			MsgBox,, ERROR, You must input the backup number!
@@ -1389,90 +1389,90 @@ DRadioMDPris:
 return
 
 DRadioPDtoDOC:
-	send, t/dep PD to DOC, how copy?{enter}
+	send, t/deplow PD to DOC, how copy?{enter}
 return
 
 DRadioPDtoMD:
-	send, t/dep PD to MD, how copy?{enter}
+	send, t/deplow PD to MD, how copy?{enter}
 return
 
 ;Scene management handlers
 PDGrabBarriers:
-	send, t/me Grabs the necessary barriers from the trunk of the cruiser, placing them under my arms {enter}
+	send, t/melow Grabs the necessary barriers from the trunk of the cruiser, placing them under my arms {enter}
 return
 
 PDGatherBarriers:
-	send, t/me Gathers all the blockades one by one and places them under my arms{enter}
+	send, t/melow Gathers all the blockades one by one and places them under my arms{enter}
 	Sleep 250
 	send, t/RemoveAllBlockades{enter}
 return
 
 PDStoreBarriers:
-	send, t/me Places the barriers in the trunk of the cruiser{enter}
+	send, t/melow Places the barriers in the trunk of the cruiser{enter}
 return
 
 PDGrabBLS:
-	send, t/me Grabs a BLS kit from the trunk of the cruiser {enter}
+	send, t/melow Grabs a BLS kit from the trunk of the cruiser {enter}
 return
 
 PDInitialBLS:
 	send, t/anim medic{enter}
 	Sleep 250
-	send, t/me Sets the BLS kit on the groud and begins looking over your injuries{enter}
+	send, t/melow Sets the BLS kit on the groud and begins looking over your injuries{enter}
 	Sleep 450
-	send, t/do What would I see?{enter}
+	send, t/dolow What would I see?{enter}
 return
 
 PDGrabBodyBag:
-	send, t/me Grabs a body bag from the trunk of the cruiser{enter}
+	send, t/melow Grabs a body bag from the trunk of the cruiser{enter}
 return
 
 PDLoadIntoBodyBag:
-	send, t/me Sets the body bag next to the body and unzips it{enter}
+	send, t/melow Sets the body bag next to the body and unzips it{enter}
 	Sleep 650
-	send, t/me Rolls the body over into the body bag, ensuring the head, arms, and feet are all clear of the zipper.{enter}
+	send, t/melow Rolls the body over into the body bag, ensuring the head, arms, and feet are all clear of the zipper.{enter}
 	Sleep 950
-	send, t/me Zips up the body bag{enter}
+	send, t/melow Zips up the body bag{enter}
 return
 
 ;Prisoner processing and arrest handlers
 
 PDCuff:
-	send, t/me Grabs a pair of cuffs from my duty belt and attempts to put them around your wrists {enter}
+	send, t/melow Grabs a pair of cuffs from my duty belt and attempts to put them around your wrists {enter}
 return
 
 PDUncuff:
-	send, t/me Takes the handcuff key from my duty belt and attempts to uncuff you{enter}
+	send, t/melow Takes the handcuff key from my duty belt and attempts to uncuff you{enter}
 return
 
 PDFrisk:
-	send, t/me Puts on a pair of non-latex gloves and attempts to frisk you{enter}
+	send, t/melow Puts on a pair of non-latex gloves and attempts to frisk you{enter}
 return
 
 PDLicenseFrisk:
-	send, t/me Attempts to locate an ID{enter}
+	send, t/melow Attempts to locate an ID{enter}
 	Sleep 500
-	send, t/do Would I find one?{enter}
+	send, t/dolow Would I find one?{enter}
 return
 
 PDKeyFrisk:
-	send, t/me Attempts to locate a set of keys{enter}
+	send, t/melow Attempts to locate a set of keys{enter}
 	Sleep 500
-	send, t/do Would I find any?{enter}
+	send, t/dolow Would I find any?{enter}
 return
 
 PDUnlockCuffedCar:
-	send, t/me Takes the keys out, clicks the unlock button and puts them back where they were{enter}
+	send, t/melow Takes the keys out, clicks the unlock button and puts them back where they were{enter}
 return
 
 PDLicenseCuff:
-	send, t/me Takes out the license, carefully reading it over and puts it back where it was{enter}
+	send, t/melow Takes out the license, carefully reading it over and puts it back where it was{enter}
 return
 
 PDReleaseForm:
-	send, t/me Takes a pen out from my breast pocket and flips through the prisoner transfer forms{enter}
+	send, t/melow Takes a pen out from my breast pocket and flips through the prisoner transfer forms{enter}
 	Sleep 650
-	send, t/me Finds a blank prisoner transfer form and signs it{enter}
+	send, t/melow Finds a blank prisoner transfer form and signs it{enter}
 return
 
 PDMugshot:
@@ -1484,9 +1484,9 @@ PDMugshot:
 	Sleep 450
 	send, t/record{enter}
 	Sleep 250
-	send, t/me Takes a mugshot of the individual and uploads it to the PD database{enter}
+	send, t/melow Takes a mugshot of the individual and uploads it to the PD database{enter}
 	Sleep 1200
-	send, t/do The upload would be successful{enter}
+	send, t/dolow The upload would be successful{enter}
 	Sleep 450
 	send, t/record{enter}
 return
@@ -1496,73 +1496,65 @@ PDFingerprints:
 	KeyWait, Enter, d
 	{
 		Sleep 450
-		send, t/me Takes each of the fingers from your left hand and slowly rolls them over the scanner{enter}
-		Sleep 1250
-		send, t/me Checks the clarity of the fingerprints on the MDC before submitting{enter}
-		Sleep 1150
-		send, t/me Submits the left hand fingerprints in the MDC{enter}
-		Sleep 1450
-		send, t/do The prints would be clear enough to be accepted by the database{enter}
-		Sleep 750
-		send, t/do The MDC would prompt to scan the right hand fingerprints{enter}
-		Sleep 550
-		send, t/me Takes each of the fingers from your right hand and slowly rolls them over the scanner{enter}
-		Sleep 1255
-		send, t/me Checks the clarity of the fingerprints on the MDC before submitting{enter}
-		Sleep 1550
-		send, t/me Submits the right hand fingerprints in the MDC{enter}
-		Sleep 1650
-		send, t/do The prints would be clear enough to be accepted by the database{enter}
-		Sleep 550 
-		send, t/me Uploads the prints to the database{enter}
-		Sleep 1550
-		send, t/do Uploading...37+5{enter}
+		send, t/melow Takes each of the fingers from your left hand and slowly rolls them over the scanner{enter}
+		Sleep 2250
+		send, t/melow Checks the clarity of the fingerprints on the MDC before submitting{enter}
+		Sleep 2150
+		send, t/melow Submits the left hand fingerprints in the MDC{enter}
 		Sleep 1750
-		send, t/do Uploading...59+5{enter}
-		Sleep 1850
-		send, t/do Uploading...78+5{enter}
-		Sleep 1575
-		send, t/do Verifying...{enter}
+		send, t/dolow The prints would be clear enough to be accepted by the database{enter}
+		Sleep 1750
+		send, t/dolow The MDC would prompt to scan the right hand fingerprints{enter}
+		Sleep 1550
+		send, t/melow Takes each of the fingers from your right hand and slowly rolls them over the scanner{enter}
+		Sleep 1755
+		send, t/melow Checks the clarity of the fingerprints on the MDC before submitting{enter}
+		Sleep 2550
+		send, t/melow Submits the right hand fingerprints in the MDC{enter}
+		Sleep 1650
+		send, t/dolow The prints would be clear enough to be accepted by the database{enter}
+		Sleep 1150 
+		send, t/melow Uploads the prints to the database{enter}
 		Sleep 750
-		send, t/do Upload successful{enter}
+		send, t/dolow The upload would be successful{enter}
 	}
 return
 
 ;Start and end watch handlers
 StartWatch:
-	send, t/me Takes off my civilian clothes and puts them in my locker{enter}
+	send, t/melow Takes off my civilian clothes and puts them in my locker{enter}
 	Sleep 750
-	send, t/me Puts on my duty uniform{enter}
+	send, t/melow Puts on my duty uniform{enter}
 	Sleep 750
-	send, t/me Grabs a body cam from the locker, securing it to my chest and turns it on {enter}
+	send, t/melow Grabs a body cam from the locker, securing it to my chest and turns it on {enter}
 	Sleep 750
-	send, t/do The light would start blinking green {enter}
+	send, t/dolow The light would start blinking green {enter}
 	Sleep 750
 	send, t/time {enter}
 	Sleep 750
-	send, t/r %BadgeNumber% show me start of watch under %LincolnCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me start of watch under %LincolnCallsign% {enter}
 	Sleep 750
 	send, t/createunit %LincolnCallsign% {enter}
 return
 
 StartWatchAdam:
-	send, t/me Takes off my civilian clothes and puts them in my locker{enter}
+	send, t/melow Takes off my civilian clothes and puts them in my locker{enter}
 	Sleep 750
-	send, t/me Puts on my duty uniform{enter}
+	send, t/melow Puts on my duty uniform{enter}
 	Sleep 750
-	send, t/me Grabs a body cam from the locker, securing it to my chest and turns it on {enter}
+	send, t/melow Grabs a body cam from the locker, securing it to my chest and turns it on {enter}
 	Sleep 750
-	send, t/do The light would start blinking green {enter}
+	send, t/dolow The light would start blinking green {enter}
 	Sleep 750
 	send, t/time {enter}
 	Sleep 750
-	send, t/r %BadgeNumber% show me start of watch under %AdamCallsign% {enter}
+	send, t/rlow %BadgeNumber% show me start of watch under %AdamCallsign% {enter}
 	Sleep 750
 	send, t/createunit %AdamCallsign% {enter}
 return
 
 EndWatch:
-	send, t/r %BadgeNumber% disbanding unit and ending watch {enter}
+	send, t/rlow %BadgeNumber% disbanding unit and ending watch {enter}
 	Sleep 650
 	send, t/disbandunit {enter}
 	Sleep 550
