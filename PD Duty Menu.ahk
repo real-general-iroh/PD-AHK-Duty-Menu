@@ -5,14 +5,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 
 ;These are the global variables that you will need to change.  All should be self explanitory.  
-
 global LincolnCallsign := "21-L-12"
 global AdamCallsign := "21-A-12"
 global SpecialCallsign := "FLD"
 global BadgeNumber := "12345"
 
 ;opens the mini MDC.  If your ctrl button gets stuck or you cannot press the windows key, remove this.  Causes some issues on some keyboards.  No known fix for now.
-
 NumpadAdd::
 	sleep, 150
 	send, {LCtrl down}
@@ -27,19 +25,16 @@ NumpadAdd::
 return
 
 ;self explanitory
-
 F9::
 	send, t/vr 1{enter}
 return
 
 ;self explanitory
-
 F10::
 	send, t/setcall -1{enter}
 return
 
 ;sets mouse button 5 to send p so you can use the phone button for TAC
-
 XButton2::p
 
 ;kill switch
@@ -81,7 +76,7 @@ Menu, FullMenu, Add, Duty Clothing, :SubMenu27
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Menu, SubMenu20, Add, Stainer, SpawnCrownVic
+Menu, SubMenu20, Add, Stanier, SpawnCrownVic
 Menu, SubMenu20, Add, Buffalo, SpawnBuffalo
 Menu, SubMenu20, Add, Interceptor, SpawnInterceptor
 Menu, SubMenu20, Add, Scout, SpawnScout
