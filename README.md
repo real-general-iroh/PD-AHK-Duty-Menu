@@ -99,7 +99,7 @@
 4. Change the portion underlined in `green` to the in-game name of the vehicle you are adding.  E.g., `Unmarked Scout`.
 5. The portion underlined in `purple` is the name of the `go to` portion (kind of like a `variable`) of AHK script that sends the macro keystrokes.
    1. You can set this to anything you want, but best practice is to name it something that relates to the task it is accomplishing.  That is, if you are adding a `TARV` to your vehicle menu, I would recommend naming it something like `SpawnTARV`.  Please bear in mind that it **MUST** be one word.
-6. Copy or create your own spawn handler from the section of spawn handlers in the AHK script (beginning on line `1145`).
+6. Copy or create your own spawn handler from the section of spawn handlers in the AHK script (beginning on line `1145`). <br />
 ![Photo of spawn handler](https://i.imgur.com/vqCU4ns.png)
 7. As in the previous example, you will leave the portion in `red` alone.
 8. Change the portion underlined in `green` to the `/fspawn` name of the vehicle you are adding.
