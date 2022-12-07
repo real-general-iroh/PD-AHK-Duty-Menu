@@ -89,14 +89,33 @@
 - `Animations`: All of the animations that you can do in game with your character split into categories.
 - Credit to [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/) and [Gaz](https://gov.eclipse-rp.net/viewtopic.php?t=85313), the original creators of this modified menu
 
-### Troubleshooting Common Issues:
+# How to Add Vehicles:
 
-| **Problem**                                                     | **Solution**                                                                                                                                  |
-|-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| The menu is not showing up in game                              | Ensure that you are running the AHK script as administrator.                                                                                  |
-| The menu minimizes my game every time I open it                 | Ensure that you are running your game in `Windowed Borderless` mode.                                                                          |
+1. First, you will need to copy one of the lines in the vehicles section of the menu.
+![`Menu, SubMenu20, Add, Stanier, SpawnCrownVic`](https://i.imgur.com/OuGPOCI.png)
+2. In the example above, you would copy `line 84` and paste it where in the list you want it to show up in the menu.
+   1. For example, if you want your new vehicle to show up below the Scout, you would copy and paste `line 84` and paste it below `line 87`.
+3. Leave the portion underlined in `red` alone.
+4. Change the portion underlined in `green` to the in-game name of the vehicle you are adding.  E.g., `Unmarked Scout`.
+5. The portion underlined in `purple` is the name of the `go to` portion (kind of like a `variable`) of AHK script that sends the macro keystrokes.
+   1. You can set this to anything you want, but best practice is to name it something that relates to the task it is accomplishing.  That is, if you are adding a `TARV` to your vehicle menu, I would recommend naming it something like `SpawnTARV`.  Please bear in mind that it **MUST** be one word.
+6. Copy or create your own spawn handler from the section of spawn handlers in the AHK script (beginning on line `1145`).
+![Photo of spawn handler](https://i.imgur.com/vqCU4ns.png)
+7. As in the previous example, you will leave the portion in `red` alone.
+8. Change the portion underlined in `green` to the `/fspawn` name of the vehicle you are adding.
+9. Change the portion underlined in `purple` to the name of the `go to` that you set in `Step 5`.
+10. Reload the script, if it is running, or run the script.
+    1. To reload the script, `bottom right > show hidden icons > right click AHK icon > reload`
+11. Press `F3` to open the menu and verify that you did not get any errors.
+
+# Troubleshooting Common Issues:
+
+| **Problem** | **Solution** |
+|:-----------------------------------------------------------------:|:-----------------------------------------------------------------:|
+| The menu is not showing up in game | Ensure that you are running the AHK script as administrator. |
+| The menu minimizes my game every time I open it | Ensure that you are running your game in `Windowed Borderless` mode. |
 | The Windows taskbar stays visible after I run `Issue Citation`  | I am not sure why this happens, as I can never get it to consistently replicate.  Try selecting `Issue Citation` again and selecting the game |
-| I drop panics when I turn on my sirens                          | Remove the portion that turns on the MDC from the script (`lines 14-28`).                                                                     |
+| I drop panics when I turn on my sirens | Remove the portion that turns on the MDC from the script (`lines 14-28`). |
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
