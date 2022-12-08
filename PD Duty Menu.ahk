@@ -5,12 +5,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 
 ;These are the global variables that you will need to change.  All should be self explanitory.  
+
 global LincolnCallsign := "21-L-12"
 global AdamCallsign := "21-A-12"
 global SpecialCallsign := "FLD"
 global BadgeNumber := "12345"
 
 ;opens the mini MDC.  If your ctrl button gets stuck or you cannot press the windows key, remove this.  Causes some issues on some keyboards.  No known fix for now.
+
 NumpadAdd::
 	sleep, 150
 	send, {LCtrl down}
@@ -25,16 +27,19 @@ NumpadAdd::
 return
 
 ;self explanitory
+
 F9::
 	send, t/vr 1{enter}
 return
 
 ;self explanitory
+
 F10::
 	send, t/setcall -1{enter}
 return
 
 ;sets mouse button 5 to send p so you can use the phone button for TAC
+
 XButton2::p
 
 ;kill switch
@@ -1375,7 +1380,7 @@ DRadioMDPris:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (BackupNumber!=""){
-			Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %BackupNumber% minutes. Are you able to receive?{enter}
+			Send, t/deplow PD to MD, %NumberInput% x injured 10-15 at %BackupNumber%. Are you able to assist?{enter}
 		}
 		else {
 			MsgBox,, ERROR, You must input the backup number!
