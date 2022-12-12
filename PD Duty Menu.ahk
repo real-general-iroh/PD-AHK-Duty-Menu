@@ -50,60 +50,60 @@ F3::
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Menu, SubMenu24, Add, Start Watch, StartWatch
-Menu, SubMenu24, Add, Start Adam Watch, StartWatchAdam
-Menu, SubMenu24, Add, End Watch, EndWatch
-Menu, FullMenu, Add, Start/End Watch, :SubMenu24
+Menu, WatchMenu, Add, Start Watch, StartWatch
+Menu, WatchMenu, Add, Start Adam Watch, StartWatchAdam
+Menu, WatchMenu, Add, End Watch, EndWatch
+Menu, FullMenu, Add, Start/End Watch, :WatchMenu
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Menu, SubMenu21, Add, Rename to %LincolnCallsign%, LincolnUnit
-Menu, SubMenu21, Add, Rename to %AdamCallsign%, AdamUnit
-Menu, SubMenu21, Add, Rename to %SpecialCallsign%, RenameSpecialCallsign
-Menu, SubMenu21, Add, Join %SpecialCallsign%, JoinSpecialCallsign
-Menu, SubMenu21, Add, Resume Lincoln, ResumeLincolnUnit
-Menu, SubMenu21, Add, Custom, CustomUnit
+Menu, UnitMenu, Add, Rename to %LincolnCallsign%, LincolnUnit
+Menu, UnitMenu, Add, Rename to %AdamCallsign%, AdamUnit
+Menu, UnitMenu, Add, Rename to %SpecialCallsign%, RenameSpecialCallsign
+Menu, UnitMenu, Add, Join %SpecialCallsign%, JoinSpecialCallsign
+Menu, UnitMenu, Add, Resume Lincoln, ResumeLincolnUnit
+Menu, UnitMenu, Add, Custom, CustomUnit
 
-Menu, FullMenu, Add, Change Unit, :SubMenu21
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-Menu, SubMenu27, Add, Default Clothing, DutyClothes
-Menu, SubMenu27, Add, Copilot Clothing, DutyCopilotClothes
-Menu, SubMenu27, Add, Rain Clothing, DutyRainClothes
-Menu, Submenu27, Add, Winter Clothing, DutyWinterClothes
-
-Menu, SubMenu27.1, Add, Fire Extinguisher, DutyFireExtinguisher
-Menu, SubMenu27.1, Add, Default Weapons, DutyWeapons
-Menu, SubMenu27, Add, Weapons, :SubMenu27.1
-
-Menu, FullMenu, Add, Duty Clothing, :SubMenu27
+Menu, FullMenu, Add, Change Unit, :UnitMenu
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Menu, SubMenu20, Add, Stanier, SpawnCrownVic
-Menu, SubMenu20, Add, Buffalo, SpawnBuffalo
-Menu, SubMenu20, Add, Interceptor, SpawnInterceptor
-Menu, SubMenu20, Add, Scout, SpawnScout
-Menu, SubMenu20, Add, Transport Van, SpawnVan
-Menu, SubMenu20, Add, Flatbed, SpawnFlatbed
-Menu, SubMenu20, Add, Park Cruiser, ParkSpawn
+Menu, ClothingMenu, Add, Default Clothing, DutyClothes
+Menu, ClothingMenu, Add, Copilot Clothing, DutyCopilotClothes
+Menu, ClothingMenu, Add, Rain Clothing, DutyRainClothes
+Menu, ClothingMenu, Add, Winter Clothing, DutyWinterClothes
 
-Menu, FullMenu, Add, Police Vehicles, :SubMenu20
+Menu, EquipmentMenu, Add, Fire Extinguisher, DutyFireExtinguisher
+Menu, EquipmentMenu, Add, Default Weapons, DutyWeapons
+Menu, ClothingMenu, Add, Weapons, :EquipmentMenu
+
+Menu, FullMenu, Add, Duty Clothing, :ClothingMenu
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Menu, TrafficStop, Add, View License, PDLicense
-Menu, TrafficStop, Add, Issue Citation, PDIssueCitationHandler
-Menu, TrafficStop, Add, Hand Citation, PDHandCitation
-Menu, FullMenuMe, Add, Traffic Stop, :TrafficStop
+Menu, VehicleMenu, Add, Stanier, SpawnCrownVic
+Menu, VehicleMenu, Add, Buffalo, SpawnBuffalo
+Menu, VehicleMenu, Add, Interceptor, SpawnInterceptor
+Menu, VehicleMenu, Add, Scout, SpawnScout
+Menu, VehicleMenu, Add, Transport Van, SpawnVan
+Menu, VehicleMenu, Add, Flatbed, SpawnFlatbed
+Menu, VehicleMenu, Add, Park Cruiser, ParkSpawn
 
-Menu, FelonyStop, Add, Step 1: Toss keys from ignition, FelonyStop1
-Menu, FelonyStop, Add, Step 2: Open vehicle door slowly, FelonyStop2
-Menu, FelonyStop, Add, Step 3: Step out, FelonyStop3
-Menu, FelonyStop, Add, Step 4: Full 360, FelonyStop4
-Menu, FelonyStop, Add, Step 5: Walk backwards, FelonyStop5
-Menu, FullMenuMe, Add, Felony Stop, :FelonyStop
+Menu, FullMenu, Add, Police Vehicles, :VehicleMenu
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Menu, TrafficStopMenu, Add, View License, PDLicense
+Menu, TrafficStopMenu, Add, Issue Citation, PDIssueCitationHandler
+Menu, TrafficStopMenu, Add, Hand Citation, PDHandCitation
+Menu, RPMenu, Add, Traffic Stop, :TrafficStopMenu
+
+Menu, FelonyStopMenu, Add, Step 1: Toss keys from ignition, FelonyStop1
+Menu, FelonyStopMenu, Add, Step 2: Open vehicle door slowly, FelonyStop2
+Menu, FelonyStopMenu, Add, Step 3: Step out, FelonyStop3
+Menu, FelonyStopMenu, Add, Step 4: Full 360, FelonyStop4
+Menu, FelonyStopMenu, Add, Step 5: Walk backwards, FelonyStop5
+Menu, RPMenu, Add, Felony Stop, :FelonyStopMenu
 
 Menu, ArrestMenu, Add, Cuff, PDCuff
 Menu, ArrestMenu, Add, Uncuff, PDUncuff
@@ -112,7 +112,7 @@ Menu, ArrestMenu, Add, Frisk for License, PDLicenseFrisk
 Menu, ArrestMenu, Add, Frisk for Keys, PDKeyFrisk
 Menu, ArrestMenu, Add, Unlock Cuffed Person's Car, PDUnlockCuffedCar
 Menu, ArrestMenu, Add, View Cuffed License, PDLicenseCuff
-Menu, FullMenuMe, Add, Arrest, :ArrestMenu
+Menu, RPMenu, Add, Arrest, :ArrestMenu
 
 Menu, SceneMenu, Add, Grab Barriers, PDGrabBarriers
 Menu, SceneMenu, Add, Gather All Barriers, PDGatherBarriers
@@ -121,17 +121,17 @@ Menu, SceneMenu, Add, Grab BLS Kit, PDGrabBLS
 Menu, SceneMenu, Add, Initial BLS, PDInitialBLS
 Menu, SceneMenu, Add, Grab Body Bag, PDGrabBodyBag
 Menu, SceneMenu, Add, Load Into Body Bag, PDLoadIntoBodyBag
-Menu, FullMenuMe, Add, Scene Management, :SceneMenu
+Menu, RPMenu, Add, Scene Management, :SceneMenu
 
-Menu, InmatePro, Add, Uncuff, PDUncuff
-Menu, InmatePro, Add, Release form, PDReleaseForm
-Menu, InmatePro, Add, Mugshot, PDMugshot
-Menu, InmatePro, Add, Fingerprints, PDFingerprints
-Menu, FullMenuMe, Add, Inmate Processing, :InmatePro
+Menu, InmateProcessingMenu, Add, Uncuff, PDUncuff
+Menu, InmateProcessingMenu, Add, Release form, PDReleaseForm
+Menu, InmateProcessingMenu, Add, Mugshot, PDMugshot
+Menu, InmateProcessingMenu, Add, Fingerprints, PDFingerprints
+Menu, RPMenu, Add, Inmate Processing, :InmateProcessingMenu
 
-Menu, FullMenuMe, Add, Tow Vehicle, TowVehicle
+Menu, RPMenu, Add, Tow Vehicle, TowVehicle
 
-Menu, FullMenu, Add, Traffic Stop/Arrest Procedure, :FullMenuMe
+Menu, FullMenu, Add, Traffic Stop/Arrest Procedure, :RPMenu
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -1195,20 +1195,24 @@ return
 
 CustomUnit:
 	InputBox, CallSign, Unit, Enter Callsign, , 250, 125
-	if ErrorLevel{
+	if ErrorLevel {
 		MsgBox, Cancel was pressed.
-	}
-	else if (CallSign=""){
+	} else if (CallSign="") {
 		MsgBox, Input is empty.
-	}
-	else{
-		send, t/disbandunit {enter}
-		Sleep 350
-		send, t/leaveunit {enter}
-		Sleep 350
-		send, t/joinunit %CallSign% {enter}
-		Sleep 350
-		send, t/rlow %BadgeNumber% show me joining %CallSign% {enter}
+	} else {
+		if WinExist("ahk_exe ragemp_v.exe") {
+			WinActivate
+			sleep 450
+			send, t/disbandunit {enter}
+			Sleep 350
+			send, t/leaveunit {enter}
+			Sleep 350
+			send, t/joinunit %CallSign% {enter}
+			Sleep 350
+			send, t/rlow %BadgeNumber% show me joining %CallSign% {enter}
+		} else {
+			MsgBox, , ERROR, Rage is not open!
+		}
 	}
 return
 
@@ -1250,60 +1254,65 @@ PDIssueCitationHandler:
 
 	Ok:
 		Gui,Submit
-		if ((DemeritSuspend="No" or DemeritSuspend="Select...") and CitationType!="Select...") {
-			sleep 150
-			send, t/melow logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
-			sleep 350
-			send, t/melow prints out the citation and grabs it from the printer{enter}
-		} else if (DemeritSuspend="Yes" and CitationType!="Select...") {
-			if (PlayerID!=""){
+		if WinExist("ahk_exe ragemp_v.exe"){
+			WinActivate
+			if ((DemeritSuspend="No" or DemeritSuspend="Select...") and CitationType!="Select...") {
 				sleep 150
 				send, t/melow logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
-				sleep 350
-				send, t/warndriver %PlayerID%{enter}
-				sleep 450
-				send, t/melow adds a demerit to the individual's driver's license{enter}
 				sleep 350
 				send, t/melow prints out the citation and grabs it from the printer{enter}
-			} else {
-				MsgBox,, ERROR, You must enter a player ID in order to issue a demerit!
-			}
-		} else if (DemeritSuspend="Demerit and Suspension" and CitationType!="Select...") {
-			if (LicenseType="Driver" or LicenseType="Driver and Trucker") and (PlayerID!=""){
-				sleep 150
-				send, t/melow logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
-				sleep 350
-				send, t/warndriver %PlayerID%{enter}
-				sleep 450
-				send, t/melow adds a demerit to the individual's driver's license{enter}
-				sleep 450
-				if (LicenseType="Driver"){
-					send, t/suspend %PlayerID% driver 1{enter}
+			} else if (DemeritSuspend="Yes" and CitationType!="Select...") {
+				if (PlayerID!=""){
+					sleep 150
+					send, t/melow logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
+					sleep 350
+					send, t/warndriver %PlayerID%{enter}
 					sleep 450
-					send, t/melow issues a 24 hour suspension on the individual's driver's license{enter}
+					send, t/melow adds a demerit to the individual's driver's license{enter}
 					sleep 350
 					send, t/melow prints out the citation and grabs it from the printer{enter}
-				} else if (LicenseType="Driver and Trucker"){
-					send, t/suspend %PlayerID% driver 1{enter}
-					sleep 550
-					send, t/suspend %PlayerID% trucker 1{enter}
-					sleep 550
-					send, t/melow issues a 24 hour suspension on both the individual's driver's and trucker's license{enter}
-					sleep 350
-					send, t/melow prints out the citation and grabs it from the printer{enter}
+				} else {
+					MsgBox,, ERROR, You must enter a player ID in order to issue a demerit!
 				}
-			} else if (PlayerID="") {
-				MsgBox,, ERROR, You must enter a player ID in order to issue a suspension!
+			} else if (DemeritSuspend="Demerit and Suspension" and CitationType!="Select...") {
+				if (LicenseType="Driver" or LicenseType="Driver and Trucker") and (PlayerID!=""){
+					sleep 150
+					send, t/melow logs into the MDC and adds a "%CitationType%" to the individual's record{enter}
+					sleep 350
+					send, t/warndriver %PlayerID%{enter}
+					sleep 450
+					send, t/melow adds a demerit to the individual's driver's license{enter}
+					sleep 450
+					if (LicenseType="Driver"){
+						send, t/suspend %PlayerID% driver 1{enter}
+						sleep 450
+						send, t/melow issues a 24 hour suspension on the individual's driver's license{enter}
+						sleep 350
+						send, t/melow prints out the citation and grabs it from the printer{enter}
+					} else if (LicenseType="Driver and Trucker"){
+						send, t/suspend %PlayerID% driver 1{enter}
+						sleep 550
+						send, t/suspend %PlayerID% trucker 1{enter}
+						sleep 550
+						send, t/melow issues a 24 hour suspension on both the individual's driver's and trucker's license{enter}
+						sleep 350
+						send, t/melow prints out the citation and grabs it from the printer{enter}
+					}
+				} else if (PlayerID="") {
+					MsgBox,, ERROR, You must enter a player ID in order to issue a suspension!
+				} else {
+					MsgBox,, ERROR, You must select a license type in order to issue a suspension!
+				}
+			} else if (GeneralCitationType!="Select...") {
+			    sleep 150
+			    send, t/melow logs into the MDC and adds a "%GeneralCitationType%" citation to the individual's record{enter}
+			    sleep 850
+			    send, t/melow prints out the citation and grabs it from the printer{enter}
 			} else {
-				MsgBox,, ERROR, You must select a license type in order to issue a suspension!
+				MsgBox,, ERROR, You must select a citation type!
 			}
-		} else if (GeneralCitationType!="Select...") {
-		    sleep 150
-		    send, t/melow logs into the MDC and adds a "%GeneralCitationType%" citation to the individual's record{enter}
-		    sleep 850
-		    send, t/melow prints out the citation and grabs it from the printer{enter}
 		} else {
-			MsgBox,, ERROR, You must select a citation type!
+			MsgBox, , ERROR, Rage is not open!
 		}
 	return
 return
@@ -1334,7 +1343,13 @@ DRadio:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (MinInput!="") {
-			Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15. ETA %MinInput% minutes. Are you able to receive?{enter}
+			if WinExist("ahk_exe ragemp_v.exe"){
+				WinActivate
+				sleep 350
+				Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15. ETA %MinInput% minutes. Are you able to receive?{enter}
+			} else {
+				MsgBox, , ERROR, Rage is not open!
+			}
 		}
 		else {
 			MsgBox,, ERROR, You must input the ETA!
@@ -1356,7 +1371,13 @@ DRadioHVT:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (MinInput!=""){
-			Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %MinInput% minutes. Are you able to receive?{enter}
+			if WinExist("ahk_exe ragemp_v.exe"){
+				WinActivate
+				sleep 350
+				Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %MinInput% minutes. Are you able to receive?{enter}
+			} else {
+				MsgBox, , ERROR, Rage is not open!
+			}
 		}
 		else {
 			MsgBox,, ERROR, You must input the ETA!
@@ -1380,7 +1401,13 @@ DRadioMDPris:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (BackupNumber!=""){
-			Send, t/deplow PD to MD, %NumberInput% x injured 10-15 at %BackupNumber%. Are you able to assist?{enter}
+			if WinExist("ahk_exe ragemp_v.exe"){
+				WinActivate
+				sleep 350
+				Send, t/deplow PD to MD, %NumberInput% x injured 10-15 at %BackupNumber%. Are you able to assist?{enter}
+			} else {
+				MsgBox, , ERROR, Rage is not open!
+			}
 		}
 		else {
 			MsgBox,, ERROR, You must input the backup number!
@@ -1788,7 +1815,7 @@ LethalPursuit:
 Return
 
 ExitApplication:
-ExitApp
+	ExitApp
 return
 
 return
