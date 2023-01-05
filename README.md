@@ -114,7 +114,6 @@
 |:-----------------------------------------------------------------:|:-----------------------------------------------------------------:|
 | The menu is not showing up in game | Ensure that you are running the AHK script as administrator. |
 | The menu minimizes my game every time I open it | Ensure that you are running your game in `Windowed Borderless` mode. |
-| The Windows taskbar stays visible after I run `Issue Citation`  | I am not sure why this happens, as I can never get it to consistently replicate.  Try selecting `Issue Citation` again and selecting the game |
 | I drop panics when I turn on my sirens | Remove the portion that turns on the MDC from the script (`lines 14-28`). |
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
