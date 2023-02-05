@@ -1200,7 +1200,7 @@ CustomUnit:
 	} else if (CallSign="") {
 		MsgBox, Input is empty.
 	} else {
-		if WinExist("ahk_exe ragemp_v.exe") {
+		if WinExist("ahk_exe GTA5.exe") {
 			WinActivate
 			sleep 450
 			send, t/disbandunit {enter}
@@ -1254,7 +1254,7 @@ PDIssueCitationHandler:
 
 	Ok:
 		Gui,Submit
-		if WinExist("ahk_exe ragemp_v.exe"){
+		if WinExist("ahk_exe GTA5.exe"){
 			WinActivate
 			if ((DemeritSuspend="No" or DemeritSuspend="Select...") and CitationType!="Select...") {
 				sleep 150
@@ -1343,7 +1343,7 @@ DRadio:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (MinInput!="") {
-			if WinExist("ahk_exe ragemp_v.exe"){
+			if WinExist("ahk_exe GTA5.exe"){
 				WinActivate
 				sleep 350
 				Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15. ETA %MinInput% minutes. Are you able to receive?{enter}
@@ -1371,7 +1371,7 @@ DRadioHVT:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (MinInput!=""){
-			if WinExist("ahk_exe ragemp_v.exe"){
+			if WinExist("ahk_exe GTA5.exe"){
 				WinActivate
 				sleep 350
 				Send, t/deplow PD to DOC, en route with %NumberInput% x 10-15 HVT through the gates. ETA %MinInput% minutes. Are you able to receive?{enter}
@@ -1401,7 +1401,7 @@ DRadioMDPris:
 			MsgBox,, ERROR, Cancel was pressed!
 		}
 		else if (BackupNumber!=""){
-			if WinExist("ahk_exe ragemp_v.exe"){
+			if WinExist("ahk_exe GTA5.exe"){
 				WinActivate
 				sleep 350
 				Send, t/deplow PD to MD, %NumberInput% x injured 10-15 at %BackupNumber%. Are you able to assist?{enter}
