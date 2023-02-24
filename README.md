@@ -12,23 +12,6 @@
 - If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a push/pull request.
 - Additionally, I have ran this by admins and they have all said that this does not break any rules, as it is all stuff that we do all the time.
 
-### Buttons:
-- `F3` Opens the menu
-- `F9` Resets your in-game VOIP
-- `F10` Clears your GPS of calls, backups, and emergencies (`/setcall -1`)
-- `F12` Kill switch to exit the application in the event of a misclick
-- `Numpad Add` Opens the mini MDC (**Remove this part if you have issues with emergencies dropping when you press `E`**)
-- `Mouse 5` Rebinds your mouse button 5 (browser forward button) to `P` so it shows up as you using your phone in-game when you speak in TAC over TeamSpeak
-### Global Variables:
-> **YOU MUST CHANGE THESE** | The global variables are located near the top of the file starting at `line 9`.
-
-| Variable | Description |
-| ----------- | ----------- |
-| `LincolnCallsign` | Used as your default LINCLON unit when starting watch |
-| `AdamCallsign` | Used as your default ADAM unit when starting watch |
-| `SpecialCallsign` | Used for individuals that are members of units that have special callsigns, such as `RED`, `FLD`, et cetera |
-| `BadgeNumber` | Used as your badge number when making radio calls with `/r` |
-
 ### Menu Overview:
 - `Start/End Watch`:
   - `Start Watch`: Does the RP of changing into your duty uniform, putting on a body cam, and starting your body cam, then creates your `LincolnCallsign` unit and does a radio call (`/r`) with your badge number and unit under which you are starting watch.
