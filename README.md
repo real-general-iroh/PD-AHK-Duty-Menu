@@ -26,7 +26,7 @@
   - `Custom`: Disbands and/or leaves the unit you are currently in (`/disbandunit` or `/leaveunit`) and does a radio call (`/r`) to reflect your change.
 - `Duty Clothing`: Self explanatory.
   - This is the only one that I could not have near-universal for everyone, as I do not have access to DB, SWAT, Command, and STAFF faction loadouts.  You will need to change the number of times that the arrow keys are pressed for each of these if you are not a POI.
-- `Police Vehicles`: Self explanatory.  Does the `/fspawn` for the types of vehicles available to a POI
+- `Police Vehicles`: Self explanatory.  Does the `/fspawn` for the types of vehicles
 - `Traffic Stop/Arrest Procedure`:
   - `Traffic Stop`:
     - `View License`: Does the RP for viewing the license of an individual and handing it back to them
