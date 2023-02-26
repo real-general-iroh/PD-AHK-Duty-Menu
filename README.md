@@ -79,14 +79,3 @@
 | The menu is not showing up in game | Ensure that you are running the AHK script as administrator. |
 | The menu minimizes my game every time I open it | Ensure that you are running your game in `Windowed Borderless` mode. |
 | I drop panics when I turn on my sirens | Remove the portion that turns on the MDC from the script (`lines 14-28`). |
-
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
-
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
-
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
-[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
