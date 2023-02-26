@@ -11,7 +11,7 @@ This is a standalone program that does not require the user to install any addit
 * Download the project. (Code > Download Zip)
 * Extract the contents into a folder of your choosing.
 * Open and modify the `hotkeys.ini` and `variables.ini` in your text editor of choice.
-* Run the `PD Duty Menu.exe`
+* Run the `PD Duty Menu.exe`.
     
 ## Features
 
