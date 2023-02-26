@@ -1,18 +1,20 @@
+
 # PD AHK-Duty-Menu
 
-## How to use:
+This is a menu I made to spawn vehicles and do frequent RP that is donw quite often, such as cuffing, frisking, uncuffing, et cetera.
 
-> If you are having issues with it not working in game, you may have to run the script as administrator, as RAGE may be preventing AutoHotKey from capturing your keyboard input.
 
-1. Download and install [AutoHotKey](https://www.autohotkey.com/download/) v1.1
-2. Download the `PD Duty Menu.ahk` file (`Green` Button -> `Download Zip`)
-3. Place the `PD Duty Menu.ahk` file in a folder
-4. Run the `PD Duty Menu.ahk`
+## Installation
 
-- If you have any issues with this menu or any bugs that you find, feel free to reach out to me.  Additionally, if you want new features added or want to add a feature yourself, feel free to reach out or do a push/pull request.
-- Additionally, I have ran this by admins and they have all said that this does not break any rules, as it is all stuff that we do all the time.
+This is a standalone program that does not require the user to install any additional programs.  See below for steps to run:
 
-### Menu Overview:
+* Download the project. (Code > Download Zip)
+* Extract the contents into a folder of your choosing.
+* Open and modify the `hotkeys.ini` and `variables.ini` in your text editor of choice.
+* Run the `PD Duty Menu.exe`
+    
+## Features
+
 - `Start/End Watch`:
   - `Start Watch`: Does the RP of changing into your duty uniform, putting on a body cam, and starting your body cam, then creates your `LincolnCallsign` unit and does a radio call (`/r`) with your badge number and unit under which you are starting watch.
   - `Start Adam Watch`: Does the RP of changing into your duty uniform, putting on a body cam, and starting your body cam, then creates your `AdamCallsign` unit and does a radio call (`/r`) with your badge number and unit under which you are starting watch.
@@ -72,10 +74,75 @@
 - `Animations`: All of the animations that you can do in game with your character split into categories.
 - Credit to [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/) and [Gaz](https://gov.eclipse-rp.net/viewtopic.php?t=85313), the original creators of this modified menu
 
-# Troubleshooting Common Issues:
 
-| **Problem** | **Solution** |
-|:-----------------------------------------------------------------:|:-----------------------------------------------------------------:|
-| The menu is not showing up in game | Ensure that you are running the AHK script as administrator. |
-| The menu minimizes my game every time I open it | Ensure that you are running your game in `Windowed Borderless` mode. |
-| I drop panics when I turn on my sirens | Remove the portion that turns on the MDC from the script (`lines 14-28`). |
+## Configuration Files & Options
+
+>Please note that the hotkeys are set using AutoHotkey's hotkey prefixes.  See their [Documentation](https://www.autohotkey.com/docs/v1/KeyList.htm) for info.
+
+**File**|**Section**|**Variable**|**Options**|**Description**
+-----|-----|-----|-----|-----
+variables.ini|Callsign|Division|Number|The number of the division of your unit.  E.g. 21, 22, 23
+variables.ini|Callsign|Letter|Text|The letter of your unit.  E.g. L, V, H, S
+variables.ini|Callsign|Number|Number|The number of your unit.
+variables.ini|Callsign|AdamChange|Boolean|Set if the letter of your unit changes to ADAM when you have a partner.
+variables.ini|Callsign|DavidChange|Boolean|Set if the letter of your unit changes to DAVID when you have a partner.
+variables.ini|Badge|Number|Number|Your badge number.
+variables.ini|SpecialCallsigns|FLD|Boolean|Set if you are a member of FLD.
+variables.ini|SpecialCallsigns|RED|Boolean|Set if you are a member of RED.
+variables.ini|SpecialCallsigns|TOM|Boolean|Set if you are a member of TED.
+variables.ini|SpecialCallsigns|DAVID|Boolean|Set if you are a member of SWAT.
+variables.ini|SpecialCallsigns|AIR|Boolean|Set if you are a member of ASD.
+variables.ini|SpecialCallsigns|TOMNumber|Number|The number of your unit to be used under your TOM callsign.
+variables.ini|SpecialCallsigns|DAVIDNumber|Number|The number of your unit to be used under your DAVID callsign.
+variables.ini|Vehicle|CrownVic|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Buffalo|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Interceptor|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Scout|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Alamo|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Caracara|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Kamacho|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Drafter|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|Vehicle|Highspeed|Text|The vehicle and livery to spawn when selecting the vehicle from the menu.
+variables.ini|VehicleAccess|CrownVic|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Buffalo|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Interceptor|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Scout|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Alamo|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Caracara|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|PoliceBike|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Kamacho|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Drafter|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Highspeed|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedCrownVic|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedBuffalo|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedGranger|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedScout|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedAlamo|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedCaracara|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|UnmarkedKamacho|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Riot|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Tarv|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Brickade|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|BF400|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Shinobi|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|RCV|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Insurgent|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Maverick|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Buzzard|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|VehicleAccess|Dinghy|Boolean|Whether or not you have access to the vehicle or want it in the spawn menu.
+variables.ini|Sex|1|Text|The third person gender to use in RP /me's and /do's.
+variables.ini|Sex|2|Text|The third person possessive gender to use in RP /me's and /do's.
+variables.ini|Debugging|Value|Boolean|Enable this to run the program inputting text into notepad to verify everything is working correctly.
+hotkeys.ini|Hotkeys|OpenMenu|Hotkey|The key to open the menu.  Default is `F3`.
+hotkeys.ini|Hotkeys|VOIPReset|Hotkey|The key to reset VOIP.  Default is `F9`.
+hotkeys.ini|Hotkeys|ClearGPS|Hotkey|The key to clear the GPS.  Default is `F10`.
+hotkeys.ini|Hotkeys|MiniMDC|Hotkey|The key to open the mini MDC.  Default is `NumpadAdd`.
+hotkeys.ini|Hotkeys|KillSwitch|Hotkey|The key to exit the application.  Default is `F12`.
+
+## Acknowledgements
+ - [Yputi](https://forum.eclipse-rp.net/topic/74673-animation-selection-tool-how-to-get-your-own-ui-for-the-new-animations/) for creating the original anim menu
+ - [Gaz](https://gov.eclipse-rp.net/viewtopic.php?t=85313) for creating the original PD menu
+
+## License
+
+[AGPL 3.0](https://choosealicense.com/licenses/agpl-3.0/)
