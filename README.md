@@ -1,7 +1,7 @@
 
 # PD AHK-Duty-Menu
 
-This is a menu I made to spawn vehicles and do frequent RP that is donw quite often, such as cuffing, frisking, uncuffing, et cetera.
+This is a menu I made to spawn vehicles and do frequent RP that is done quite often, such as cuffing, frisking, uncuffing, et cetera.
 
 
 ## Installation
