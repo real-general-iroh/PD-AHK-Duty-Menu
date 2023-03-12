@@ -1643,7 +1643,7 @@ TowVehicle:
 	Sleep, 3000
 	Paste("/melow pulls another lever on the control panel and starts the winch", True)
 	Sleep, 3000
-	Paste("t/melow secures the vehicle by its tires to the flatbed and lifts the ramp", True)
+	Paste("/melow secures the vehicle by its tires to the flatbed and lifts the ramp", True)
 Return
 
 ;Interdepartmental radio handlers
