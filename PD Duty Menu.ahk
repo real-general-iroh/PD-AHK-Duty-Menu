@@ -1280,152 +1280,152 @@ return
 ;Vehicle spawn handlers
 SpawnCrownVic:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_CrownVic, True)
+	Paste("/fspawn " Vehicle_CrownVic, True)
 return
 
 SpawnBuffalo:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Buffalo, True)
+	Paste("/fspawn " Vehicle_Buffalo, True)
 return
 
 SpawnInterceptor:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Interceptor, True)
+	Paste("/fspawn " Vehicle_Interceptor, True)
 return
 
 SpawnScout:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Scout, True)
+	Paste("/fspawn " Vehicle_Scout, True)
 return
 
 SpawnAlamo:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Alamo, True)
+	Paste("/fspawn " Vehicle_Alamo, True)
 return
 
 SpawnCaracara:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Caracara, True)
+	Paste("/fspawn " Vehicle_Caracara, True)
 return
 
 SpawnPoliceBike:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policeb", True)
+	Paste("/fspawn policeb", True)
 return
 
 SpawnKamacho:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Kamacho, True)
+	Paste("/fspawn " Vehicle_Kamacho, True)
 return
 
 SpawnDrafter:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Drafter, True)
+	Paste("/fspawn " Vehicle_Drafter, True)
 return
 
 SpawnHighspeed:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn " Vehicle_Highspeed, True)
+	Paste("/fspawn " Vehicle_Highspeed, True)
 return
 
 SpawnUnmarkedCrownVic:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn police4", True)
+	Paste("/fspawn police4", True)
 return
 
 SpawnUnmarkedBuffalo:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn fbi", True)
+	Paste("/fspawn fbi", True)
 return
 
 SpawnUnmarkedGranger:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn fbi2", True)
+	Paste("/fspawn fbi2", True)
 return
 
 SpawnUnmarkedScout:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policescout2", True)
+	Paste("/fspawn policescout2", True)
 return
 
 SpawnUnmarkedAlamo:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policealamo2", True)
+	Paste("/fspawn policealamo2", True)
 return
 
 SpawnUnmarkedCaracara:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policecaracara2", True)
+	Paste("/fspawn policecaracara2", True)
 return
 
 SpawnUnmarkedKamacho:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policekamacho2", True)
+	Paste("/fspawn policekamacho2", True)
 return
 
 SpawnRiot:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn riot", True)
+	Paste("/fspawn riot", True)
 return
 
 SpawnTarv:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policetarv", True)
+	Paste("/fspawn policetarv", True)
 return
 
 SpawnBrickade:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn brickade", True)
+	Paste("/fspawn brickade", True)
 return
 
 SpawnBF400:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn BF400", True)
+	Paste("/fspawn BF400", True)
 return
 
 SpawnShinobi:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn shinobi", True)
+	Paste("/fspawn shinobi", True)
 return
 
 SpawnRCV:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn riot2", True)
+	Paste("/fspawn riot2", True)
 return
 
 SpawnInsurgent:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn insurgent2", True)
+	Paste("/fspawn insurgent2", True)
 return
 
 SpawnMaverick:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn polmav", True)
+	Paste("/fspawn polmav", True)
 return
 
 SpawnBuzzard:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn buzzard2", True)
+	Paste("/fspawn buzzard2", True)
 return
 
 SpawnPredator:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn predator", True)
+	Paste("/fspawn predator", True)
 return
 
 SpawnDinghy:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn dinghy", True)
+	Paste("/fspawn dinghy", True)
 return
 
 SpawnVan:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn policet", True)
+	Paste("/fspawn policet", True)
 return
 
 SpawnFlatbed:
 	WinActivate, ahk_exe %Application%
-	Paste("/fsapwn flatbed", True)
+	Paste("/fspawn flatbed", True)
 return
 
 ParkSpawn:
