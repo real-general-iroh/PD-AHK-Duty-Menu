@@ -1727,7 +1727,7 @@ DRadioMDPris:
 			if WinExist("ahk_exe GTA5.exe"){
 				WinActivate
 				sleep 350
-				Paste("deplow PD to MD, " NumberInput "x injured 10-15 at " BackupNumber ". Are you able to assist?", True)
+				Paste("/deplow PD to MD, " NumberInput "x injured 10-15 at " BackupNumber ". Are you able to assist?", True)
 			} else {
 				MsgBox, , ERROR, Rage is not open!
 			}
