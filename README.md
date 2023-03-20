@@ -15,6 +15,8 @@ This is a standalone program that does not require the user to install any addit
     
 ## Features
 
+> All new features and changes are tracked in CHANGLOG.md
+
 - `Start/End Watch`:
   - `Start Watch`: Does the RP of changing into your duty uniform, putting on a body cam, and starting your body cam, then creates your `LincolnCallsign` unit and does a radio call (`/r`) with your badge number and unit under which you are starting watch.
   - `Start Adam Watch`: Does the RP of changing into your duty uniform, putting on a body cam, and starting your body cam, then creates your `AdamCallsign` unit and does a radio call (`/r`) with your badge number and unit under which you are starting watch.
